@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-image: url("https://img.freepik.com/premium-photo/contact-us-icon-phone-email-mail-wood-cube-customer-service-support_33874-477.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+          Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+      }
+
+      nav {
+        text-align: center;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        font-size: 20px;
+        text-transform: uppercase;
+      }
+
+      #AddContacts {
+        width: 80%;
+        margin: 10px auto;
+        background-color: rgba(255, 255, 255, 0.8);
+        padding: 20px;
+        border-radius: 10px;
+      }
+
+      h2 {
+        font-size: 40px;
+        font-weight: 500;
+        text-align: center;
+      }
+
+      .form-group {
+        margin: 15px 0;
+      }
+
+      label {
+        font-size: 18px;
+        display: block;
+        margin: 10px 0;
+      }
+
+      input {
+        border: 1px solid black;
+        font-size: 18px;
+        padding: 10px;
+        width: 100%;
+        border-radius: 5px;
+      }
+
+      #btn {
+        cursor: pointer;
+        color: white;
+        background: rgb(13, 110, 253);
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        font-size: 18px;
+        font-family: sans-serif;
+        letter-spacing: 2px;
+        margin-top: 10px;
+      }
+
+      #btn:hover {
+        background-color: rgb(22, 22, 22);
+      }
+
+      hr {
+        width: 80%;
+        margin: 20px auto;
+        opacity: 0.5;
+      }
+
+      #contact-list {
+        width: 80%;
+        margin: 10px auto;
+      }
+
+      #contact {
+        width: 100%;
+        margin: 10px 0;
+        border: 1px solid rgb(168, 151, 151);
+        border-radius: 5px;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: relative;
+      }
+
+      #contact p {
+        margin: 5px 0;
+      }
+
+      .contact-actions {
+        margin-top: 10px;
+        display: flex;
+        justify-content: flex-end;
+      }
+
+      .contact-actions button {
+        margin-left: 10px;
+        padding: 5px 10px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        cursor: pointer;
+      }
+
+      #delete {
+        background-color: #dc4545;
+      }
+
+      #delete:hover {
+        background-color: #b73a3a;
+      }
+
+      #edit {
+        background-color: #007bff;
+      }
+
+      #edit:hover {
+        background-color: #0056b3;
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Manager</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    
+    <!-- Navbar -->
+    <nav>
+      <h1>Contact Manager</h1>
+    </nav>
+
+    <!-- Add Contact -->
+    <div id="AddContacts">
+      <h2>Add Contacts</h2>
+      <!-- Form -->
+      <form id="form">
+        <!-- Full Name -->
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required />   
+        </div>
+        <!-- Email -->
+        <div class="form-group">
+          <label for="email">Email address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <!-- Mobile Number -->
+        <div class="form-group">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" pattern="[0-9]{10}" required />
+        </div>
+        <!-- Submit Button -->
+        <button id="btn" type="submit">Submit</button>
+      </form>
+    </div>
+    <hr />
+    <!-- Contact List -->
+    <div id="contact-list"></div>
+    <script src="main.js"></script>
+  </body>
+</html>
